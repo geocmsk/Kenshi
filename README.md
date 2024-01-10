@@ -42,9 +42,9 @@ sudo nano conf.yaml
 
 # burada sadece Rues kısmını kendi adınız yapın - gerisini ben ayarladım
 log: info
-name: ADINIZ
+name: Rues
 lite: true
-gossip: 24
+gossip: 5
 rpc:
   ethereum:
     - https://ethereum.publicnode.com
@@ -52,10 +52,8 @@ rpc:
     - wss://ethereum.publicnode.com
     - https://eth.rpc.blxrbdn.com
 database:
-  url: postgres://<user>:<pass>@<host>:<port>/<db>
-peers:
-  max: 64
-  parallel: 8
+  url: mongodb+srv://<user>:<password>@<url>/?retryWrites=true&w=majority
+  name: unchained
 
 > CTRL X Y Enter ile çıkıyoruz.
 
