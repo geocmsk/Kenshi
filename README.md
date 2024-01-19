@@ -44,7 +44,6 @@ sudo nano conf.yaml
 log: info
 name: ADINIZ
 lite: true
-gossip: 24
 rpc:
   ethereum:
     - https://ethereum.publicnode.com
@@ -54,8 +53,18 @@ rpc:
 database:
   url: postgres://<user>:<pass>@<host>:<port>/<db>
 peers:
-  max: 64
+  max: 128
   parallel: 8
+jail:
+  duration: 5
+  strikes: 5
+waves:
+  count: 8
+  select: 50
+  group: 8
+  jitter:
+    min: 5
+    max: 15
 
 > CTRL X Y Enter ile çıkıyoruz.
 
